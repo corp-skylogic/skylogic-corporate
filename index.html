@@ -291,6 +291,41 @@
       padding-left: 18px;
     }
 
+    .card-media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 22px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .wide-image {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .wide-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .feature-image {
       min-height: 420px;
       border-radius: 28px;
@@ -463,7 +498,7 @@
             <div class="hero-copy">
               <h1>未来感を、
                 信頼感に変える。</h1>
-              <p class="lead">Apple系の静けさと先進性を意識した、1ページ完結型のコーポレートサイト。大きな余白、強いタイポグラフィ、映像演出で、第一印象からブランドの格を引き上げます。</p>
+              <p class="lead">SKYLOGIC.incは、WEBマーケティングと広告運用を軸に、企業の成長を支えるマーケティングパートナーです。戦略設計から実行、改善までを一気通貫で支援します。</p>
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#services">事業内容を見る</a>
                 <a class="btn btn-secondary" href="#company">会社概要を見る</a>
@@ -495,20 +530,26 @@
           <div class="mini">About</div>
           <h2>静かに強く、
             先進的に伝える。</h2>
-          <p>派手に見せるのではなく、整った情報設計と映像体験で企業の信頼性を高める構成です。Apple系は“盛る”より“削る”ほうが近づきます。</p>
+          <p>データとクリエイティブの両面から、成果につながるマーケティング支援を提供します。短期的な数字だけでなく、継続的に伸びる仕組みづくりを重視しています。</p>
+        </div>
+        <div class="wide-image reveal">
+          <img src="assets/about-main.jpg" alt="SKYLOGIC.incの世界観を表現するビジュアル" />
         </div>
         <div class="grid-3">
           <article class="card reveal">
+            <div class="card-media"><img src="assets/about-1.jpg" alt="戦略設計のイメージ" /></div>
             <div class="mini">Philosophy</div>
             <h3>Less, but better.</h3>
             <p>不要な説明を削ぎ落とし、強みだけを研ぎ澄ませて届けます。</p>
           </article>
           <article class="card reveal">
+            <div class="card-media"><img src="assets/about-2.jpg" alt="洗練されたデザインのイメージ" /></div>
             <div class="mini">Design</div>
             <h3>余白が価値を語る。</h3>
             <p>黒を基調に、タイポとコントラストで洗練された印象を作ります。</p>
           </article>
           <article class="card reveal">
+            <div class="card-media"><img src="assets/about-3.jpg" alt="先進的な体験のイメージ" /></div>
             <div class="mini">Experience</div>
             <h3>映像で未来を感じさせる。</h3>
             <p>トップの動画で世界観を先に伝え、テキストで信頼に落とし込みます。</p>
@@ -523,10 +564,14 @@
           <div class="mini">Services</div>
           <h2>事業を、
             端的に美しく。</h2>
-          <p>コーポレートサイトは情報量より、伝わる順番が大事です。3項目くらいに絞ると高級感が残ります。</p>
+          <p>事業理解から配信設計、改善運用まで、成果に直結する実務をスピーディーに支援します。</p>
+        </div>
+        <div class="wide-image reveal">
+          <img src="assets/services-main.jpg" alt="WEBマーケティング支援のイメージ" />
         </div>
         <div class="grid-3">
           <article class="card reveal">
+            <div class="card-media"><img src="assets/service-1.jpg" alt="コンサルティングのイメージ" /></div>
             <div class="mini">Service 01</div>
             <h3>Consulting</h3>
             <p>課題の整理、戦略設計、実行支援まで一貫して支援します。</p>
@@ -537,6 +582,7 @@
             </ul>
           </article>
           <article class="card reveal">
+            <div class="card-media"><img src="assets/service-2.jpg" alt="クリエイティブ制作のイメージ" /></div>
             <div class="mini">Service 02</div>
             <h3>Creative</h3>
             <p>ブランドに一貫性を持たせるクリエイティブを設計・制作します。</p>
@@ -547,6 +593,7 @@
             </ul>
           </article>
           <article class="card reveal">
+            <div class="card-media"><img src="assets/service-3.jpg" alt="運用改善のイメージ" /></div>
             <div class="mini">Service 03</div>
             <h3>Growth</h3>
             <p>運用と改善の両面から、事業成長を支える仕組みを作ります。</p>
@@ -566,19 +613,21 @@
           <div class="mini">Strength</div>
           <h2>印象ではなく、
             記憶に残す。</h2>
-          <p>先進性を感じさせるビジュアルと、BtoBでも信頼される落ち着きの両立を狙った構成です。</p>
+          <p>市場理解、訴求設計、運用改善を通じて、広告効果の最大化を目指します。</p>
         </div>
         <div class="grid-2">
-          <div class="feature-image reveal"></div>
+          <div class="wide-image reveal">
+            <img src="assets/strength-main.jpg" alt="成果最大化を表現するイメージ" />
+          </div>
           <article class="card reveal">
             <div class="mini">Why it works</div>
             <h3>重厚なのに、重くない。</h3>
-            <p>ヒーロー動画は短く静かなものを使うと、Appleっぽい世界観に近づきます。派手なエフェクトより、抽象的な光、都市、デバイス、空間、流体などが相性良いです。</p>
+            <p>変化の早い広告環境において、適切な戦略設計と継続的な改善運用により、クライアントの成果最大化を支援します。</p>
             <ul>
-              <li>黒背景 × 白文字 × グレー補助色</li>
-              <li>見出しは短く大きく</li>
-              <li>動画は無音・ループ・低刺激</li>
-              <li>情報セクションは最小限に絞る</li>
+              <li>WEBマーケティング戦略立案</li>
+              <li>広告運用・改善支援</li>
+              <li>クリエイティブ企画・訴求設計</li>
+              <li>分析・レポーティング</li>
             </ul>
           </article>
         </div>
@@ -591,7 +640,10 @@
           <div class="mini">Company</div>
           <h2>必要な情報だけを、
             正しく載せる。</h2>
-          <p>会社概要は盛り込みすぎないほうが、むしろ上質に見えます。</p>
+          <p>企業情報を簡潔に整理し、信頼につながる情報を正確に掲載しています。</p>
+        </div>
+        <div class="wide-image reveal">
+          <img src="assets/company-main.jpg" alt="SKYLOGIC.incの企業イメージ" />
         </div>
         <div class="grid-2">
           <article class="card reveal">
@@ -606,7 +658,7 @@
           <article class="card reveal" id="contact">
             <div class="mini">Contact</div>
             <h3>お問い合わせ</h3>
-            <p>現在、お問い合わせ導線は準備中です。必要になったタイミングでメール、フォーム、SNS導線を追加できます。</p>
+            <p>お問い合わせ導線は現在準備中です。公開後、必要に応じてメールまたはフォームを追加予定です。</p>
           </article>
         </div>
       </div>
@@ -616,7 +668,7 @@
       <div class="container">
         <div class="contact-panel reveal">
           <h2>Next Standard.</h2>
-          <p>会社名と事業内容は反映済みです。ファーストビュー動画はあとからURLを差し替えるだけで更新できます。独自ドメインをつなげば、すぐコーポレートサイトとして成立します。</p>
+          <p>SKYLOGIC.incは、企業のマーケティング活動を戦略と実行の両面から支援し、持続的な成長に貢献します。</p>
           <div class="contact-actions">
             <a href="#top" class="btn btn-secondary">トップへ戻る</a>
           </div>
