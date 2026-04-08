@@ -450,8 +450,8 @@
     <section class="hero">
       <div class="container">
         <div class="hero-card reveal">
-          <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop">
-            <source src="https://cdn.coverr.co/videos/coverr-earth-rotating-in-space-1569188655014?download=1080p" type="video/mp4" />
+          <video id="heroVideo" class="hero-video" autoplay muted playsinline preload="auto" poster="assets/poster.jpg">
+            <source src="assets/hero1.mp4" type="video/mp4" />
           </video>
           <div class="hero-overlay"></div>
 
@@ -642,6 +642,19 @@
       el.style.transitionDelay = `${i * 70}ms`;
       observer.observe(el);
     });
+
+    const heroVideo = document.getElementById('heroVideo');
+    const heroPlaylist = ['assets/hero1.mp4', 'assets/hero2.mp4'];
+    let heroIndex = 0;
+
+    if (heroVideo) {
+      heroVideo.addEventListener('ended', () => {
+        heroIndex = (heroIndex + 1) % heroPlaylist.length;
+        heroVideo.src = heroPlaylist[heroIndex];
+        heroVideo.load();
+        heroVideo.play().catch(() => {});
+      });
+    }
   </script>
 </body>
 </html>
