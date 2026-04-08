@@ -485,7 +485,7 @@
     <section class="hero">
       <div class="container">
         <div class="hero-card reveal">
-          <video id="heroVideo" class="hero-video" autoplay muted playsinline preload="auto" src="p4"></video>
+          <video id="heroVideo" class="hero-video" autoplay muted playsinline preload="auto" src="hero1.mp4"></video>
           <div class="hero-overlay"></div>
 
           <div class="hero-content">
@@ -697,13 +697,35 @@
     const heroPlaylist = ['hero1.mp4', 'hero2.mp4'];
     let heroIndex = 0;
 
+    const startHeroPlayback = () => {
+      if (!heroVideo) return;
+      heroVideo.muted = true;
+      heroVideo.defaultMuted = true;
+      heroVideo.playsInline = true;
+      heroVideo.autoplay = true;
+      heroVideo.play().catch(() => {});
+    };
+
     if (heroVideo) {
+      heroVideo.addEventListener('canplay', startHeroPlayback);
+      heroVideo.addEventListener('loadeddata', startHeroPlayback);
       heroVideo.addEventListener('ended', () => {
         heroIndex = (heroIndex + 1) % heroPlaylist.length;
         heroVideo.src = heroPlaylist[heroIndex];
         heroVideo.load();
-        heroVideo.play().catch(() => {});
+        startHeroPlayback();
       });
+
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) startHeroPlayback();
+      });
+
+      ['touchstart', 'click'].forEach((eventName) => {
+        document.addEventListener(eventName, startHeroPlayback, { once: true });
+      });
+
+      window.addEventListener('load', startHeroPlayback);
+      startHeroPlayback();
     }
   </script>
 </body>
